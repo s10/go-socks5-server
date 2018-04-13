@@ -1,12 +1,12 @@
 .PHONY: all build release
 
-IMAGE=dddpaul/vscalebot
-VERSION=0.7
+IMAGE=dddpaul/socks5-proxy
+VERSION=1.0
 
 all: build
 
 build-alpine:
-	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ./bin/vscalebot ./main.go
+	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ./bin/socks5-server ./server.go
 
 build:
 	@docker build --tag=${IMAGE} .
