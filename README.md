@@ -1,6 +1,6 @@
 # go-socks5-proxy
 
-Simple socks5 server using go-socks5 with auth
+Simple SOCKS5 server using go-socks5 with auth
 
 # Start container with proxy
 ```docker run -d --name socks5-proxy -p 1080:1080 -e PROXY_USER=<PROXY_USER> -e PROXY_PASSWORD=<PROXY_PASSWORD> esten/go-socks5-proxy```
