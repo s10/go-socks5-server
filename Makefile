@@ -1,6 +1,6 @@
 .PHONY: all build release
 
-IMAGE=esten/socks5-proxy
+IMAGE=esten/go-socks5-proxy
 VERSION=1.0
 
 all: build

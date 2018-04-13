@@ -1,5 +1,5 @@
 FROM golang:1.10.1 as builder
-WORKDIR /go/src/github.com/s10/socks5-server
+WORKDIR /go/src/github.com/s10/go-socks5-server
 ADD . ./
 RUN make build-alpine
 
@@ -8,7 +8,7 @@ RUN apk add --update ca-certificates && \
     rm -rf /var/cache/apk/* /tmp/* && \
     update-ca-certificates
 WORKDIR /app
-COPY --from=builder /go/src/github.com/s10/socks5-server/bin/socks5-server .
+COPY --from=builder /go/src/github.com/s10/go-socks5-server/bin/socks5-server .
 
 EXPOSE 1080
 ENTRYPOINT ["./socks5-server"]
