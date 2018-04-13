@@ -1,5 +1,4 @@
 # go-socks5-proxy
-[![CircleCI](https://circleci.com/gh/serjs/socks5-server.svg?style=shield)](https://circleci.com/gh/serjs/socks5-server)
 
 Simple socks5 server using go-socks5 with auth
 
